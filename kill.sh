@@ -1,0 +1,1 @@
+rm ./routes/$1.js

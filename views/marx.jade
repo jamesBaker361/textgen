@@ -1,0 +1,9 @@
+extends layout
+
+block content
+	h2 click to generate!
+	form.form-horizontal(role='form', method='POST')
+		.form-group
+			.col-sm-offset-2.col-sm-2
+			button.btn.btn-primary(type='submit')
+	p= content

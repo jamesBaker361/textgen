@@ -1,0 +1,21 @@
+extends layout
+
+block content
+	h1="find a twitter"
+	form.form-horizontal(role='form', method='POST')
+		input(type='hidden', name='_csrf', value=_csrf)
+
+		.form-group
+			h3="Query"
+			.col-sm-4
+			input.form-control(type='text', name='query', id='query', autofocus=true)
+		.form-group
+			h3="Quantity"
+			.col-sm-4
+			input.form-control(type='number', name='quant', id='quant')
+		.form-group
+			.col-sm-offset-2.col-sm-2
+			button.btn.btn-primary(type='submit')
+	ul
+	each val in {tweets}
+		li=val
